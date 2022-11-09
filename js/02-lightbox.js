@@ -19,19 +19,5 @@ const galleryStringArrayEl = galleryItems.map((el) => {
 
 galleryBoxEl.insertAdjacentHTML('beforeend', galleryStringArrayEl.join(""));
 
-
-const onImageClickOpenEl = event => {
-    event.preventDefault() 
-const {target} = event;
-    if (target.nodeName !== 'IMG') {
-        return;
-} 
-
 new SimpleLightbox('.gallery a', {captionsData:"alt", captionDelay: 250} );
 
-}
-
-galleryBoxEl.addEventListener ("click", onImageClickOpenEl)
-
-
-// ==========================
